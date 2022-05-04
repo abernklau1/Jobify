@@ -42,3 +42,7 @@ export const DELETE_JOB_BEGIN = "DELETE JOB BEGIN";
 export const EDIT_JOB_BEGIN = "EDIT_JOB_BEGIN";
 export const EDIT_JOB_SUCCESS = "EDIT_JOB_SUCCESS";
 export const EDIT_JOB_ERROR = "EDIT_JOB_ERROR";
+
+// actions to begin the request of showing stats and the success of the request
+export const SHOW_STATS_BEGIN = "SHOW_STATS_BEGIN";
+export const SHOW_STATS_SUCCESS = "SHOW_STATS_SUCCESS";
