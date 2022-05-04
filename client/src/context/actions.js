@@ -31,3 +31,6 @@ export const CREATE_JOB_ERROR = "CREATE_JOB_ERROR";
 // actions to begin the request of getting all jobs and the success of the request
 export const GET_JOBS_BEGIN = "GET_JOBS_BEGIN";
 export const GET_JOBS_SUCCESS = "GET_JOBS_SUCCESS";
+
+// action to set the state of editing a job
+export const SET_EDIT_JOB = "SET_EDIT_JOB";
