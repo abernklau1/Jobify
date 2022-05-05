@@ -5,27 +5,21 @@ import Job from "./Job";
 import Wrapper from "../assets/wrappers/JobsContainer";
 
 const JobsContainer = () => {
-  const { getJobs, jobs, isLoading, page, totalJobs } = useAppContext();
+  const {
+    getJobs,
+    jobs,
+    isLoading,
+    page,
+    totalJobs,
+    search,
+    searchStatus,
+    searchType,
+    sort,
+  } = useAppContext();
 
-  const useEffectOnlyOnce = () => {
-    // create reference for useEffect call
-    const calledOnce = useRef(false);
-
-    useEffect(() => {
-      // if already called, returns nothing so the fetch operation is not continuously called
-      if (calledOnce.current) {
-        return;
-      }
-      // if it has not been called then calls the function getJobs() to fetch all jobs
-      if (!calledOnce.current) {
-        getJobs();
-
-        calledOnce.current = true;
-      }
-    });
-  };
-
-  useEffectOnlyOnce();
+  useEffect(() => {
+    getJobs();
+  }, [search, searchStatus, searchType, sort]);
 
   if (isLoading) {
     return <Loading center />;

@@ -27,7 +27,7 @@ const Landing = () => {
             Login/Register
           </Link>
         </div>
-        <img src={main} alt="job hunt" className="img main-img" srcset="" />
+        <img src={main} alt="job hunt" className="img main-img" />
       </div>
     </Wrapper>
   );
